@@ -1,1 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K&M Exporters - Premium Kenyan Avocados and Produce</title>
+<body>
 
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">K&M Exporters</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#avocados">Avocados</a>
+            <a href="#fruits">Fruits</a>
+            <a href="#meat">Meat</a>
+            <a href="#orders">Orders</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Premium Kenyan Exports for Global Markets</h1>
+        <p>Specializing in Fresh Avocados, Fruits & Halal Meat for the Middle East and Europe</p>
+        <a href="#orders" class="btn">PLACE AN ORDER</a>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="who-we-are">
+        <div class="who-container">
+            <div class="who-image">
+                <img src="../images/about-us.jpg" alt="K&M Team in Avocado Farm">
+            </div>
+            <div class="who-text">
+                <h2>About K&M Exporters</h2>
+                <p>We are a leading exporter of premium Kenyan produce, with avocados as our flagship commodity. Sourced from the fertile highlands of Kenya, our avocados are known for their creamy texture and rich flavor.</p>
+                <p>Our commitment to quality ensures that all our products meet international standards, delivering fresh and sustainable goods to markets in the Middle East and Europe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="vision-image">
+            <img src="../images/vision-avocados.jpg" alt="Sustainable Avocado Farming">
+        </div>
+        <div class="vision-text">
+            <h2>Our Vision</h2>
+            <p>To be the preferred supplier of Kenyan avocados and produce globally, promoting sustainable farming practices and empowering local farmers.</p>
+        </div>
+    </section>
+
+    <!-- Products Section (Emphasis on Avocados) -->
+    <section class="products" id="products">
+        <h2>Our Commodities</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../images/avocados.jpg" alt="Fresh Kenyan Avocados">
+                <div class="product-card-content">
+                    <h3>Avocados (Primary Commodity)</h3>
+                    <p>Our premium Hass avocados are hand-picked at peak ripeness, ensuring superior taste and quality for export.</p>
+                    <a href="#orders" class="btn">Order Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="../images/fruits.jpg" alt="Fresh Fruits">
+                <div class="product-card-content">
+                    <h3>Fruits</h3>
+                    <p>A variety of tropical fruits including mangoes, pineapples, and passion fruits, all fresh from Kenyan orchards.</p>
+                    <a href="#orders" class="btn">Order Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="../images/meat.jpg" alt="Halal Meat">
+                <div class="product-card-content">
+                    <h3>Halal Meat</h3>
+                    <p>Certified halal beef, lamb, and poultry, ethically sourced and prepared for international markets.</p>
+                    <a href="#orders" class="btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Slider Section -->
+    <section class="why-slider">
+        <h2>Why Choose K&M Exporters</h2>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide" style="background-image: url('../images/why-quality.jpg');">
+                    <div class="slide-text">
+                        <h3>Superior Quality</h3>
+                        <p>Our avocados are grown with the highest standards, ensuring freshness and flavor in every shipment.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('../images/why-sustainable.jpg');">
+                    <div class="slide-text">
+                        <h3>Sustainable Practices</h3>
+                        <p>We prioritize eco-friendly farming to protect Kenya's natural resources for future generations.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('../images/why-global.jpg');">
+                    <div class="slide-text">
+                        <h3>Global Reach</h3>
+                        <p>Delivering to the Middle East and Europe with reliable logistics and competitive pricing.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="nav prev">&#9664;</button>
+            <button class="nav next">&#9654;</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 K&M Exporters. All rights reserved.</p>
+        <p>Contact us: info@kmexporters.co.ke | +254 123 456 789</p>
+    </footer>
+
+    <!-- JavaScript for Slider and Scrolled Header -->
+    <script>
+        // Scrolled Header
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Slider Functionality
+        let currentSlide = 0;
+        const slides = document.querySelector('.slides');
+        const slideCount = document.querySelectorAll('.slide').length;
+
+        document.querySelector('.next').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        });
+    </script>
+</body>
+</html>
